@@ -138,6 +138,9 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias editzsh='open ~/.zshrc'
+alias jp='jupyter lab ./'
+alias jptos='jupyter nbconvert --to script' # jptos: Convert given .ipynb to executable python script
 
 # To remove host name
 #prompt_context() {
