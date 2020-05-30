@@ -24,8 +24,10 @@ export PATH="/usr/local/opt/node@8/bin:$PATH"
 # Path to your oh-my-zsh installation.
 export ZSH="/Users/milesturpin/.oh-my-zsh"
 
-
-
+### Ruby
+# currently prints to v 2.6
+export PATH="$(ruby -e 'puts Gem.user_dir')/bin:$PATH"
+#/usr/local/lib/ruby/gems/2.7.0/bin
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -138,6 +140,7 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
 alias editzsh='open ~/.zshrc'
 alias jp='jupyter lab ./'
 alias jptos='jupyter nbconvert --to script' # jptos: Convert given .ipynb to executable python script
@@ -160,3 +163,9 @@ alias jptos='jupyter nbconvert --to script' # jptos: Convert given .ipynb to exe
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
+
