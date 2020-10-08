@@ -5,6 +5,8 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
+
+
 ##### Copying from bash_profile
 PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
 export PATH
@@ -97,6 +99,7 @@ ZSH_THEME="powerlevel10k/powerlevel10k"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(
 	git
+	tmux
 	zsh-syntax-highlighting
 	zsh-autosuggestions
 	#rsync
@@ -107,6 +110,7 @@ plugins=(
 	virtualenv
 	github
 	web-search
+	fasd
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -169,3 +173,13 @@ export PATH="$PATH:$HOME/.rvm/bin"
 
 test -e "${HOME}/.iterm2_shell_integration.zsh" && source "${HOME}/.iterm2_shell_integration.zsh"
 
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/Users/milesturpin/Dev/google-cloud-sdk/path.zsh.inc' ]; then . '/Users/milesturpin/Dev/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/Users/milesturpin/Dev/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/milesturpin/Dev/google-cloud-sdk/completion.zsh.inc'; fi
+
+### gcloud
+#PATH="/Users/milesturpin/Dev/google-cloud-sdk/bin:$PATH"
+#export PATH
