@@ -104,12 +104,12 @@ plugins=(
 	zsh-autosuggestions
 	#rsync
 	#themes
-	osx
-	pip
-	python
-	virtualenv
-	github
-	web-search
+	#osx
+	#pip
+	#python
+	#virtualenv
+	#github
+	#web-search
 	fasd
 )
 
@@ -148,6 +148,12 @@ export FZF_CTRL_T_COMMAND="$FZF_DEFAULT_COMMAND"
 alias editzsh='open ~/.zshrc'
 alias jp='jupyter lab ./'
 alias jptos='jupyter nbconvert --to script' # jptos: Convert given .ipynb to executable python script
+
+ch () {
+	gsutil cat "$1/hparams.gin"
+}
+
+export TERM=xterm-256color
 
 # To remove host name
 #prompt_context() {
