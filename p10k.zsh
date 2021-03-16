@@ -28,10 +28,10 @@
 
   autoload -Uz is-at-least && is-at-least 5.1 || return
 
-  zmodload zsh/langinfo
-  if [[ ${langinfo[CODESET]:-} != (utf|UTF)(-|)8 ]]; then
-    local LC_ALL=${${(@M)$(locale -a):#*.(utf|UTF)(-|)8}[1]:-en_US.UTF-8}
-  fi
+  # zmodload zsh/langinfo
+  # if [[ ${langinfo[CODESET]:-} != (utf|UTF)(-|)8 ]]; then
+  #   local LC_ALL=${${(@M)$(locale -a):#*.(utf|UTF)(-|)8}[1]:-en_US.UTF-8}
+  # fi
 
   # The list of segments shown on the left. Fill it with the most important segments.
   typeset -g POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=(
